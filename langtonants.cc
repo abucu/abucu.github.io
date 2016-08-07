@@ -1,35 +1,20 @@
 #include <cstdio>
 #include <unistd.h>
-
 #define SIZE 8
 #define DRC  4
 #define DEV  2
 int a[SIZE][SIZE];
-int l = 0;
-int x = 4;
-int y = 4;
-int d = 0;
+int l = 0; int x = 4; int y = 4; int d = 0;
 int m[DRC][DEV];
 
 void print() {
-  while(l) {
-    printf("\b\r");
-    --l;
-  }
+  while(l) { printf("\b\r"); --l; }
   for(int i = 0; i < SIZE; ++i) {
     for(int j = 0; j < SIZE; ++j) {
       printf("%d", a[i][j]);
     }
-    printf("\n");
-    ++l;
+    printf("\n"); ++l;
   }
-}
-
-void test() {
-  printf("111111\n");
-  printf("222222\n");
-  sleep(1);
-  printf("\b\r\b\r123\n");
 }
 
 int main() {
